@@ -1,4 +1,4 @@
-package za.ac.cput.domain;
+package cput.za.ac.domain;
 /*   Educator.java
      Entity for the Educator
      Author:Rodrigue Ndzana Ngonga Beaubane (219384096)

@@ -1,19 +1,18 @@
 package za.ac.cput.repository;
 
+
+import cput.za.ac.domain.Course;
+import cput.za.ac.factory.CourseFactory;
+import cput.za.ac.repository.CourseRepository;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import za.ac.cput.domain.Course;
-import za.ac.cput.factory.CourseFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class) // help in testing our CRUD method in Alphabetically order
 class CourseRepositoryTest {

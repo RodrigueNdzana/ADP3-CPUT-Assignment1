@@ -1,12 +1,11 @@
-package za.ac.cput.repository;
+package cput.za.ac.repository;
 /*   EducatorRepository.java
      Repository for the Educator
      Author:Rodrigue Ndzana Ngonga Beaubane (219384096)
      Date: 07 April 2022
 */
 
-import za.ac.cput.domain.Course;
-import za.ac.cput.domain.Educator;
+import cput.za.ac.domain.Educator;
 
 import java.util.HashSet;
 import java.util.Set;

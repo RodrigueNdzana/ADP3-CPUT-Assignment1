@@ -1,4 +1,4 @@
-package za.ac.cput.repository;
+package cput.za.ac.repository;
 
 /*   IRepository.java
      Main Interface  IRepository
