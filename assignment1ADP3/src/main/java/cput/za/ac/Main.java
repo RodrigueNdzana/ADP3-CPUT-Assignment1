@@ -1,4 +1,4 @@
-package za.ac.cput;
+package cput.za.ac;
 
 public class Main {
     public static void main(String[] args) {

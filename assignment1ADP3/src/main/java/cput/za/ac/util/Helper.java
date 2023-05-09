@@ -1,4 +1,4 @@
-package za.ac.cput.util;
+package cput.za.ac.util;
 /*   Helper.java
      Helper file for validation
      Author:Rodrigue Ndzana Ngonga Beaubane (219384096)

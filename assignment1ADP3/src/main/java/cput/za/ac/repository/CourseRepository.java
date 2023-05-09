@@ -1,6 +1,6 @@
-package za.ac.cput.repository;
+package cput.za.ac.repository;
 
-import za.ac.cput.domain.Course;
+import cput.za.ac.domain.Course;
 
 import java.util.HashSet;
 import java.util.Set;

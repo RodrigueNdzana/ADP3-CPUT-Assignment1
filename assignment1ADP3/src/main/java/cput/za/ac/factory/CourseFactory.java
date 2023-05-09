@@ -1,13 +1,12 @@
-package za.ac.cput.factory;
+package cput.za.ac.factory;
 /*   CourseFactory.java
      Factory for the Course
      Author:Rodrigue Ndzana Ngonga Beaubane (219384096)
      Date: 07 April 2022
 */
-import za.ac.cput.domain.Course;
-import za.ac.cput.util.Helper;
+import cput.za.ac.domain.Course;
+import cput.za.ac.util.Helper;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CourseFactory {

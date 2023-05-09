@@ -1,4 +1,4 @@
-package za.ac.cput.domain;
+package cput.za.ac.domain;
 
 import java.util.List;
 import java.util.Objects;

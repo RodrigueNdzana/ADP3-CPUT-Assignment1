@@ -1,10 +1,11 @@
 package za.ac.cput.repository;
 
+import cput.za.ac.repository.EducatorRepository;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import za.ac.cput.domain.Educator;
-import za.ac.cput.factory.EducatorFactory;
+import cput.za.ac.domain.Educator;
+import cput.za.ac.factory.EducatorFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 

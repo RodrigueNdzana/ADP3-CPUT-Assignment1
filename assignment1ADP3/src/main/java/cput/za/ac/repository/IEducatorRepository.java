@@ -1,6 +1,6 @@
-package za.ac.cput.repository;
+package cput.za.ac.repository;
 
-import za.ac.cput.domain.Educator;
+import cput.za.ac.domain.Educator;
 
 import java.util.Set;
 

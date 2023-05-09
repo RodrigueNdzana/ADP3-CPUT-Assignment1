@@ -1,7 +1,7 @@
-package za.ac.cput.factory;
+package cput.za.ac.factory;
 
-import za.ac.cput.domain.Educator;
-import za.ac.cput.util.Helper;
+import cput.za.ac.domain.Educator;
+import cput.za.ac.util.Helper;
 
 public class EducatorFactory {
     public static Educator createEducator(String edu_Name, String edu_Address, String edu_Gender) {
