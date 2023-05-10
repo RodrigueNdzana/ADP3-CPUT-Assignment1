@@ -11,12 +11,12 @@ class parentTest {
     public void testParentBuilder() {
         parent parent = new parent.Builder()
                 .parentId(1)
-                .parentName("Enzo")
+                .parentName("Enzoh")
                 .phoneNumber("0719449412")
                 .build();
 
         assertEquals(1, parent.getParentId());
-        assertEquals("Enzo", parent.getParentName());
+        assertEquals("Enzoh", parent.getParentName());
         assertEquals("0719449412", parent.getPhoneNumber());
     }
 }

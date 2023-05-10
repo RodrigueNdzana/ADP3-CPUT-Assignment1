@@ -9,5 +9,5 @@ public class subjectFactory {
                 .build();
 
     }
-    subject subject = subjectFactory.createSubject("ADP360S", "Applications Development");
+    subject subject = subjectFactory.createSubject("ADP360S3", "Applications Development");
 }

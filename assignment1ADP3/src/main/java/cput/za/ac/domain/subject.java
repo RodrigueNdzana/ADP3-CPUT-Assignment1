@@ -38,7 +38,7 @@ public class subject {
 
     public static void main(String[] args) {
         subject subject = new subject.Builder()
-                .subjectCode("ADP360S")
+                .subjectCode("ADP360S3")
                 .subjectName("Applications Development")
                 .build();
 

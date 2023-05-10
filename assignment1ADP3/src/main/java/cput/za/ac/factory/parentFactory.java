@@ -10,5 +10,5 @@ public class parentFactory {
                 .phoneNumber(phone_number)
                 .build();
     }
-    parent parent = parentFactory.createParent(1, "Enzo", "0719449412");
+    parent parent = parentFactory.createParent(1, "Enzoh", "0719449412");
 }
