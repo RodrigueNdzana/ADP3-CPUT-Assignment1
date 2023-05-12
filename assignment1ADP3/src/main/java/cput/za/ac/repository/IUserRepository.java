@@ -11,7 +11,7 @@ import cput.za.ac.domain.User;
 import java.util.List;
 import java.util.Set;
 
-public interface IUserRepository extends IRepositor<User, String> {
+public interface IUserRepository extends IRepository<User, String> {
     //create, read, update, delete
     public Set<User> getAll();
 }
