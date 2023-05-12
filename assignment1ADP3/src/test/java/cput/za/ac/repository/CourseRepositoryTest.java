@@ -1,5 +1,9 @@
-package za.ac.cput.repository;
-
+package cput.ac.za.repository;
+/*   CourseRepositoryTest.java
+     Repository test for the Course
+     Author:Rodrigue Ndzana Ngonga Beaubane (219384096)
+     Date: 07 April 2023
+*/
 
 import cput.za.ac.domain.Course;
 import cput.za.ac.factory.CourseFactory;
@@ -28,7 +32,7 @@ class CourseRepositoryTest {
         Course created = repository.create(course);
         // the assertEquals kinda check if the Course_code() we are getting from the Course repository is the same with the one created
         assertEquals(course.getCourse_code(), created.getCourse_code());
-        System.out.println("Create Course: " + created);
+        System.out.println("Create Course: " + created+"\n");
     }
 
     @Test
@@ -36,7 +40,7 @@ class CourseRepositoryTest {
         System.out.println("------------------------- Read Course ----------------------------------------");
         Course readCourse = repository.read(course.getCourse_code());
         assertNotNull(readCourse);
-        System.out.println("Read Course: " + readCourse);
+        System.out.println("Read Course: " + readCourse+"\n");
     }
 
     @Test
@@ -54,7 +58,7 @@ class CourseRepositoryTest {
                 .setEnrolledStudents(updatedStudents)
                 .build();
         assertNotNull(repository.update(updated)); // if this object return null that mean it going to fail
-        System.out.println("updated Course: " + updated);
+        System.out.println("updated Course: " + updated+"\n");
     }
 
     @Test
@@ -62,14 +66,14 @@ class CourseRepositoryTest {
         System.out.println("------------------------- Delete Course ----------------------------------------");
         boolean success = repository.delete(course.getCourse_code());
         assertTrue(success);
-        System.out.println("Delete: " + success);
+        System.out.println("Delete: " + success+"\n");
     }
 
     @Test
     void e_getAll() {
         System.out.println("------------------------- Show all Course ----------------------------------------");
         System.out.println("Show all: ");
-        System.out.println(repository.getAll());
+        System.out.println(repository.getAll()+"\n");
     }
 
 }

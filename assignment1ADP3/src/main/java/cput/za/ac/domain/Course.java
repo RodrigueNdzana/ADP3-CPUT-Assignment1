@@ -6,7 +6,7 @@ import java.util.Objects;
 /*   Course.java
      Entity for the Course
      Author:Rodrigue Ndzana Ngonga Beaubane (219384096)
-     Date: 07 April 2022
+     Date: 07 April 2023
 */
 public class Course {
     private String course_code;

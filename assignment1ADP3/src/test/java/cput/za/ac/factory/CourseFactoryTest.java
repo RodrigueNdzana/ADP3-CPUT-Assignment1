@@ -1,8 +1,8 @@
-package za.ac.cput.factory;
+package cput.za.ac.factory;
 /*   CourseFactoryTest.java
      FactoryTest  for course
      Author:Rodrigue Ndzana Ngonga Beaubane (219384096)
-     Date: 07 April 2022
+     Date: 07 April 2023
 */
 
 import cput.za.ac.factory.CourseFactory;
