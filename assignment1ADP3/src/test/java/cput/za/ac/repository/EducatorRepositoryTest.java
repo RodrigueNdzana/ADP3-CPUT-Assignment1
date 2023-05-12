@@ -1,5 +1,9 @@
-package za.ac.cput.repository;
-
+package cput.za.ac.repository;
+/*   EducatorRepositoryTest.java
+     Repository test for the Educator
+     Author:Rodrigue Ndzana Ngonga Beaubane (219384096)
+     Date: 07 April 2023
+*/
 import cput.za.ac.repository.EducatorRepository;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
@@ -21,7 +25,7 @@ class EducatorRepositoryTest {
         Educator created = repository.create(educator);
         // the assert equal kinda check if the id we are getting from the Educator repository is the same with the one created
         assertEquals(educator.getEducator_Id(), created.getEducator_Id());
-        System.out.println("Create: " + created);
+        System.out.println("Create: " + created +"\n");
     }
 
     @Test
@@ -29,7 +33,7 @@ class EducatorRepositoryTest {
         System.out.println("------------------------- Read Educator ----------------------------------------");
         Educator read = repository.read(educator.getEducator_Id());
         assertNotNull(read); // assertEqual could also be used
-        System.out.println("Read Educator: " + read);
+        System.out.println("Read Educator: " + read+"\n");
     }
 
     @Test
@@ -40,7 +44,7 @@ class EducatorRepositoryTest {
                 .setEdu_Gender("Male")
                 .build();
         assertNotNull(repository.update(updated)); // if this object return null that mean it going to fail
-        System.out.println("Updated Educator: " + updated);
+        System.out.println("Updated Educator: " + updated+"\n");
     }
 
     @Test
@@ -48,14 +52,14 @@ class EducatorRepositoryTest {
         System.out.println("------------------------- Delete Educator ----------------------------------------");
         boolean success = repository.delete(educator.getEducator_Id());
         assertTrue(success);
-        System.out.println("Delete educator: " + success);
+        System.out.println("Delete educator: " + success+"\n");
     }
 
     @Test
     void e_getAll() {
         System.out.println("------------------------- Show All Educator ----------------------------------------");
         System.out.println("Show all: ");
-        System.out.println(repository.getAll());
+        System.out.println(repository.getAll()+"\n");
     }
 
 }
