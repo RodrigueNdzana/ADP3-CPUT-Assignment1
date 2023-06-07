@@ -9,8 +9,5 @@
         <module name="TDD" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="TDD" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>
