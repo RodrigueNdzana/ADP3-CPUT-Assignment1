@@ -1,5 +1,6 @@
 package cput.za.ac.domain;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
@@ -8,8 +9,10 @@ import java.util.Objects;
      Author:Rodrigue Ndzana Ngonga Beaubane (219384096)
      Date: 07 April 2023
 */
-public class Course {
+
+public class Course{
     private String course_code;
+
     private String student_Id;
     private String subject_Code;
     private String course_Name;

@@ -1,9 +1,13 @@
 package cput.za.ac.repository;
 
 import cput.za.ac.domain.Educator;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.Set;
 
-public interface IEducatorRepository extends IRepository<Educator, String> {
-    public Set<Educator> getAll();
+
+@Repository
+public interface IEducatorRepository extends JpaRepository<Educator, String> {
+    //public Set<Educator> getAll();
 }

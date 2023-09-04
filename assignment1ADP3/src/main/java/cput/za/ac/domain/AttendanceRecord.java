@@ -6,15 +6,15 @@ package cput.za.ac.domain;
 */
 public class AttendanceRecord {
 
-    public int AttendanceID;
-    public int StudentID;
-    public String AttendanceStatus;
+    private int AttendanceID;
+    private int StudentID;
+    private String AttendanceStatus;
 
-    public String Date;
-    public String Department;
-    public String Class;
-    public String TeacherID;
-    public String SubjectID;
+    private String Date;
+    private String Department;
+    private String Class;
+    private String TeacherID;
+    private String SubjectID;
 
     private AttendanceRecord(AttendanceRecord.Builder builder){
         this.AttendanceID = builder.AttendanceID;

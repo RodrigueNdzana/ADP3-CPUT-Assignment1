@@ -1,11 +1,11 @@
 package cput.za.ac.repository;
 
 import cput.za.ac.domain.Course;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.Set;
+@Repository
+public interface ICourseRepository extends JpaRepository<Course, String> {
 
-public interface ICourseRepository extends IRepository<Course, String> {
-    // This inherit the method created in the IRepository create , read,update and delete
-    //Which got implemented in the CourseRepository
-    public Set<Course> getAll();
 }
