@@ -23,7 +23,7 @@ public class AdministratorRepository {
 
     public Administartor findAdministratorById(String ID) {
         for (Administartor administrator : administrators) {
-            if (Objects.equals(administrator.setID(), ID)) return administrator;
+            if (Objects.equals(administrator, ID)) return administrator;
         }
         return null;
     }

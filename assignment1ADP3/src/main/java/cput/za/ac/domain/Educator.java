@@ -4,9 +4,14 @@ package cput.za.ac.domain;
      Author:Rodrigue Ndzana Ngonga Beaubane (219384096)
      Date: 07 April 2023
 */
+
 import java.util.Objects;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+@Entity
 public class Educator {
+    @Id
     private String educator_Id;
     private String edu_Name;
     private String edu_Address;
