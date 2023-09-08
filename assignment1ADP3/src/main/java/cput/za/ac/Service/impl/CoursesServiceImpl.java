@@ -1,8 +1,11 @@
 package cput.za.ac.Service.impl;
 
-import cput.za.ac.Service.Interface.ICourseService;
+
+import cput.za.ac.Service.ICourseService;
 import cput.za.ac.domain.Course;
-import cput.za.ac.repository.CourseRepository;
+//import cput.za.ac.repository.CourseRepository;
+import cput.za.ac.repository.ICourseRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +13,12 @@ import java.util.List;
 import java.util.Set;
 @Service
 public class CoursesServiceImpl implements ICourseService {
-    private CoursesServiceImpl service;
-    private CourseRepository repository;
-    @Autowired
-    private CoursesServiceImpl(CourseRepository repository){
+    //private CoursesServiceImpl service;
+    private ICourseRepository repository;
+
+    @Autowired // You can also annotate the setter method if preferred
+
+    private CoursesServiceImpl(ICourseRepository repository){
         this.repository = repository;
     }
 

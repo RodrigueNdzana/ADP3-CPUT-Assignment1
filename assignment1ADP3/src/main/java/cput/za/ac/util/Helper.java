@@ -5,7 +5,7 @@ package cput.za.ac.util;
      Date: 07 April 2022
 */
 
-import org.apache.commons.validator.routines.EmailValidator;
+
 
 import java.util.UUID;
 
@@ -23,11 +23,6 @@ public class Helper {
         return UUID.randomUUID().toString();
     }
 
-    //email validation
-    public static boolean isValidEmail(String email) {
-        EmailValidator ev = EmailValidator.getInstance();
-        return ev.isValid(email);
-    }
 
 
 }

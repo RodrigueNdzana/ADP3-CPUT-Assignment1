@@ -1,11 +1,17 @@
 package cput.za.ac.domain;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 /*   Administrator.java
      Domain for Administrator
      Author:Neilyn Parnell (218132425)
      Date: 07 April 2022
 */
+@Entity
 public class Administartor {
-  private String ID;
+  @Id
+    private String ID;
 
   private String Name;
 

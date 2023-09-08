@@ -3,11 +3,11 @@ package cput.ac.za.repository;
      Repository test for the Course
      Author:Rodrigue Ndzana Ngonga Beaubane (219384096)
      Date: 07 April 2023
-*/
+
 
 import cput.za.ac.domain.Course;
 import cput.za.ac.factory.CourseFactory;
-import cput.za.ac.repository.CourseRepository;
+import cput.za.ac.repository.ICourseRepository;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
@@ -20,7 +20,7 @@ import java.util.List;
 
 @TestMethodOrder(MethodOrderer.MethodName.class) // help in testing our CRUD method in Alphabetically order
 class CourseRepositoryTest {
-    private static CourseRepository repository = CourseRepository.getRepository();
+    private static ICourseRepository repository = ICourseRepository.getRepository();
     public static List<String> enrolledStudents = new ArrayList<>(List.of("Neilyn", "Rodrigue", "Mxolisi", "Bavuyise", "Anne"));
 
     private Course course = CourseFactory.createCourse("Ctre45223", "ADP32S", "ADP3", "Mr Kruben Naidoo", "Information Technology", "room 1.3", enrolledStudents);
@@ -77,3 +77,5 @@ class CourseRepositoryTest {
     }
 
 }
+
+ */

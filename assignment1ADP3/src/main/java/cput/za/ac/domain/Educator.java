@@ -17,6 +17,9 @@ public class Educator {
     private String edu_Address;
     private String edu_Gender;
 
+    public Educator(){
+
+    }
     public Educator(Builder builder){
         this.educator_Id = builder.educator_Id;
         this.edu_Name = builder.edu_Name;

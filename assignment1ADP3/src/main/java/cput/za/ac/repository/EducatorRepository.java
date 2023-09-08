@@ -3,7 +3,7 @@ package cput.za.ac.repository;
      Repository for the Educator
      Author:Rodrigue Ndzana Ngonga Beaubane (219384096)
      Date: 07 April 2022
-*/
+
 
 import cput.za.ac.domain.Educator;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -76,4 +76,6 @@ public class EducatorRepository implements IEducatorRepository {
     public Set<Educator> getAll() {
         return educatorDB;
     }
+
 }
+ */

@@ -1,11 +1,17 @@
 package cput.za.ac.domain;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 /*   AttendanceRecord.java
      Domain for Attendance Record
      Author:Neilyn Parnell (218132425)
      Date: 07 April 2022
 */
+@Entity
 public class AttendanceRecord {
 
+    @Id
     private int AttendanceID;
     private int StudentID;
     private String AttendanceStatus;

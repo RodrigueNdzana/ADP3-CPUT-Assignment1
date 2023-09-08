@@ -1,5 +1,8 @@
 package cput.za.ac.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
@@ -10,7 +13,10 @@ import java.util.Objects;
      Date: 07 April 2023
 */
 
-public class Course{
+
+@Entity
+ public class Course{
+    @Id
     private String course_code;
 
     private String student_Id;
@@ -21,6 +27,9 @@ public class Course{
     private String className;
     private List<String> enrolledStudents;
 
+    protected Course(){
+
+    }
     private Course(Builder builder){
         this.course_code = builder.course_code;
         this.student_Id = builder.student_Id;

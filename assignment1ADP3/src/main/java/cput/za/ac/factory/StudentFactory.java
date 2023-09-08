@@ -10,9 +10,9 @@ import cput.za.ac.util.Helper;
 
 public class StudentFactory {
     public static Student createStudent(String name, String password, String email){
-        String studentNum = Helper.generatedId();
-        if (!Helper.isValidEmail(email))
-            return null;
+   String studentNum = Helper.generatedId();
+//        if (!Helper.isValidEmail(email))
+//            return null;
 
         //if (Helper.isNullorEmpty(userId)||Helper.isNullorEmpty(firstName) ||Helper.isNullorEmpty(lastName)||Helper.isNullorEmpty(phoneNum)
         //||Helper.isNullorEmpty(address) )

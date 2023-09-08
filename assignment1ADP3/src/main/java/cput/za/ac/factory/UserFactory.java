@@ -13,8 +13,8 @@ public class UserFactory {
     public static User createUser(String firstName, String lastName, String phoneNum, String email,
                                   String address){
         String userId = Helper.generatedId();
-        if (!Helper.isValidEmail(email))
-            return null;
+//        if (!Helper.isValidEmail(email))
+//            return null;
 
         //if (Helper.isNullorEmpty(userId)||Helper.isNullorEmpty(firstName) ||Helper.isNullorEmpty(lastName)||Helper.isNullorEmpty(phoneNum)
         //||Helper.isNullorEmpty(address) )

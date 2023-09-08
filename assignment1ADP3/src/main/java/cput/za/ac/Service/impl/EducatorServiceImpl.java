@@ -2,7 +2,7 @@ package cput.za.ac.Service.impl;
 
 import cput.za.ac.Service.Interface.IEducatorService;
 import cput.za.ac.domain.Educator;
-import cput.za.ac.repository.EducatorRepository;
+import cput.za.ac.repository.IEducatorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.Set;
 @Service
 public class EducatorServiceImpl implements IEducatorService {
-    private EducatorRepository repository;
-    @Autowired
-    private EducatorServiceImpl(EducatorRepository repository){
+    private IEducatorRepository repository;
+    @Autowired(required = false)
+    private EducatorServiceImpl(IEducatorRepository repository){
         this.repository = repository;
     }
     @Override
@@ -44,7 +44,6 @@ public class EducatorServiceImpl implements IEducatorService {
 
     @Override
     public List<Educator> getAll() {
-        return this.repository.findAll();{
-        return null;
+        return this.repository.findAll();
     }
 }

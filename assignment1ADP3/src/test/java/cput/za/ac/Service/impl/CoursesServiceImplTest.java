@@ -2,11 +2,9 @@ package cput.za.ac.Service.impl;
 
 import cput.za.ac.domain.Course;
 import cput.za.ac.factory.CourseFactory;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,59 +12,47 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
-
+@SpringBootTest
 class CoursesServiceImplTest {
+
     @Autowired
-    private CoursesServiceImpl coursesService;
-    //adding the enrolled student to the course
-    private static Course course;
+    private CoursesServiceImpl service;
+    private static Course course = CourseFactory.createCourse("219384096", "ADT3", "Application Development Theory 3","Ms F.Allie","Information technology","Room 1.19", new ArrayList<>());
 
     @Test
-    @Order(1)
-    void create() {
-        System.out.println("--------------- created a Course ------");
-        //adding the enrolled student to the course
-        List<String> enrolledStudents = new ArrayList<>();
-
-        enrolledStudents.add("Neilyn");
-        enrolledStudents.add("Rodrigue");
-        enrolledStudents.add("Mxolisi");
-        enrolledStudents.add("Bavuyise");
-        enrolledStudents.add("Anne");
-        course = CourseFactory.createCourse("219384096", "ADP3", "Application Development Pratice 3", "Mr Kruben Naidoo", "Information Technology", "room 1.3", enrolledStudents);
-
-        assertNotNull(course);
-        System.out.println(course);
-
+    void a_create() {
+        Course created = service.create(course);
+        assertEquals(course.getCourse_code(), created.getCourse_code());
+        System.out.println("Created: "+ created);
     }
 
     @Test
-    @Order(2)
-    void read() {
-        System.out.println("-------- Read data ---------");
-       Course readCourse = coursesService.read(course.getCourse_code());
-        assertNotNull(readCourse);
-        System.out.println(readCourse);
-        assertAll(() -> assertEquals(course.getCourse_code(),course.getCourse_code()));
-        System.out.println();
-    }
-
-    @Order(3)
-    @Test
-    void update() {
-
+    void b_read() {
+        Course read = service.read(course.getCourse_code());
+        assertNotNull(read);
+        System.out.println("Read: " + read);
     }
 
     @Test
-    boolean delete(String course_Code) {
-        boolean success = this.coursesService.delete(course.getCourse_code());
-        return success;
+    void c_update() {
+        Course newCourse = new Course.Builder().copy(course).setCourse_Name("ADT 3")
+                .setClassName("room 1.23")
+                .setEducator("MR Kruben").build();
+        Course updated =service.update(newCourse);
+        assertEquals(newCourse.getCourse_Name(), updated.getCourse_Name());
+        assertEquals(newCourse.getClassName(), updated.getClassName());
+        assertEquals(newCourse.getEducator(), updated.getEducator());
+        System.out.println("Updated" + updated);
     }
 
     @Test
-    void getAll() {
+    @Disabled
+    void e_delete() {
     }
+
     @Test
-    void getService() {
+    void d_getAll() {
+        System.out.println("Get all Courses: ");
+        System.out.println(service.getAll());
     }
 }
