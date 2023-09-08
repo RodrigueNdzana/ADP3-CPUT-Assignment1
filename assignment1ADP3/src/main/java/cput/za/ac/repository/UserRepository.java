@@ -7,14 +7,15 @@ package cput.za.ac.repository;
 
 
 
-import cput.za.ac.domain.User;
+/*import cput.za.ac.domain.User;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
 
 //import static sun.util.locale.LocaleMatcher.filter;
-
+//@Repository
 public class UserRepository implements IUserRepository{
     private static UserRepository repository = null;
     private Set<User> userDB = null;
@@ -46,7 +47,7 @@ public class UserRepository implements IUserRepository{
      }
       return null;*/
         //lambda expressions
-        User user = userDB.stream()
+       /* User user = userDB.stream()
                 .filter (u->u.getUserId().equals(userId))
                 .findAny()
                 .orElse(null);
@@ -80,5 +81,5 @@ public class UserRepository implements IUserRepository{
 
         return userDB;
     }
-}
+}*/
 
