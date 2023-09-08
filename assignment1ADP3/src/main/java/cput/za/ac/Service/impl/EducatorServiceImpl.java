@@ -11,10 +11,12 @@ import java.util.Set;
 @Service
 public class EducatorServiceImpl implements IEducatorService {
     private EducatorRepository repository;
+
     @Autowired
-    private EducatorServiceImpl(EducatorRepository repository){
+    private EducatorServiceImpl(EducatorRepository repository) {
         this.repository = repository;
     }
+
     @Override
     public Educator create(Educator educator) {
         return this.repository.save(educator);
@@ -33,9 +35,10 @@ public class EducatorServiceImpl implements IEducatorService {
         }
         return null;
     }
+
     @Override
     public boolean delete(String educator_Id) {
-        if(this.repository.existsById(educator_Id)){
+        if (this.repository.existsById(educator_Id)) {
             this.repository.deleteById(educator_Id);
             return true;
         }
@@ -44,7 +47,8 @@ public class EducatorServiceImpl implements IEducatorService {
 
     @Override
     public List<Educator> getAll() {
-        return this.repository.findAll();{
-        return null;
+        return this.repository.findAll();
+        //return null;
+
     }
 }
